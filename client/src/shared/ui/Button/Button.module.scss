@@ -1,0 +1,33 @@
+.clear {
+  color: rgb(33, 30, 30);
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background: green;
+  }
+}
+
+.outline {
+  background: none;
+  font-weight: 700;
+  padding: 10px;
+  border: none;
+  color: rgb(178, 252, 252);
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+.filled {
+  background: black;
+  font-weight: 700;
+  padding: 10px 25px 10px 25px;
+  border: none;
+  color: rgb(178, 252, 252);
+  border-radius: 10px;
+  cursor: pointer;
+}
