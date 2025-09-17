@@ -4,7 +4,7 @@
 ## 🔗 Ссылки
 
 - Развернутое приложение: [TaskBook_floors](https://frontendtasks.vercel.app/tasks)  
-- Исходный код: [GitHub репозиторий](https://github.com/your-username/TaskBook_floors)
+- Исходный код: [GitHub репозиторий]([https://github.com/IrinaPerezhegina/TaskBook_floors](https://github.com/IrinaPerezhegina/TaskBook_floors))
 
 ---
 
