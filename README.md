@@ -1,12 +1,4 @@
 # TaskBook_floors
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![Build Status](https://img.shields.io/github/actions/workflow/status/your-username/TaskBook_floors/ci.yml?branch=main)](https://github.com/your-username/TaskBook_floors/actions)  
-[![Coverage Status](https://coveralls.io/repos/github/your-username/TaskBook_floors/badge.svg?branch=main)](https://coveralls.io/github/your-username/TaskBook_floors?branch=main)  
-[![Issues](https://img.shields.io/github/issues/your-username/TaskBook_floors.svg)](https://github.com/your-username/TaskBook_floors/issues)  
-[![Node.js](https://img.shields.io/badge/Node.js-v18-green)](https://nodejs.org/)  
-[![React](https://img.shields.io/badge/React-v18-blue)](https://reactjs.org/)
-
 ---
 
 ## 🔗 Ссылки
