@@ -17,7 +17,6 @@ export const HeaderUser = memo((props: HeaderUserProps) => {
   const dispatch = useAppDispatch();
   const user = useAppSelector(getAuthUser);
   const navigate = useNavigate();
-  console.log(user);
 
   const onLogout = useCallback(async () => {
     dispatch(authActions.logout());

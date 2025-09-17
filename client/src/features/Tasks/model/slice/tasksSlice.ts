@@ -44,8 +44,6 @@ const tasksSlice = createSlice({
       };
     },
     setUpdateTask: (state, action: PayloadAction<Task>) => {
-      console.log(action.payload);
-
       state.task = action.payload;
     },
     setTaskTitle: (state, action: PayloadAction<string>) => {

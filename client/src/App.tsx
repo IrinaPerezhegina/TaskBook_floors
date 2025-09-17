@@ -6,12 +6,12 @@ import {
   Routes,
 } from "react-router-dom";
 
+import { PrivateRoute } from "@/app/PrivateRoute";
 import { getAuthUserLoading, initAuthUser } from "@/features/Auth";
 import { LoginPage } from "@/pages/LoginPage";
 import TasksPage from "@/pages/TasksPage/ui/TasksPage";
 import { Loader } from "@/shared";
 import { useAppDispatch, useAppSelector } from "@/shared/lib/hooks/hooks";
-import { PrivateRoute } from "@/app/PrivateRoute";
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();

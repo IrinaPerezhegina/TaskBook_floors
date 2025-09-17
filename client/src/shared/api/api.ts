@@ -1,9 +1,10 @@
-import { USER_LOCALSTORAGE_KEY } from "@/shared";
 import axios from "axios";
 
+import { USER_LOCALSTORAGE_KEY } from "@/shared";
+
 export const $api = axios.create({
-   baseURL: "https://backendtasks.vercel.app/",
-  });
+  baseURL: "https://backendtasks.vercel.app/",
+});
 
 $api.interceptors.request.use((config) => {
   if (config.headers) {
