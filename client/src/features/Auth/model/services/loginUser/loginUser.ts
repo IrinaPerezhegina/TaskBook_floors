@@ -1,7 +1,7 @@
-import { ThunkConfig } from "@/app/store";
-import { $api, USER_LOCALSTORAGE_KEY } from "@/shared";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+
+import { $api, ThunkConfig, USER_LOCALSTORAGE_KEY } from "@/shared";
 import { AuthResponse } from "../../types/auth";
 
 interface LoginData {

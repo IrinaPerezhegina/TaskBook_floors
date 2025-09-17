@@ -1,16 +1,9 @@
-import { ThunkConfig } from "@/app/store";
-import { $api } from "@/shared";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+
+import { $api, ThunkConfig } from "@/shared";
 import { AuthResponse } from "../../types/auth";
 
-// Тип пользователя (пример)
-
-// Тип состояния аутентификации
-
-// Начальное состояние
-
-// Пример асинхронного thunk для получения данных пользователя по токену
 export const initAuthUser = createAsyncThunk<
   AuthResponse, // возвращаемый тип
   void,

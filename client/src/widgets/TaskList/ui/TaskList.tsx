@@ -19,7 +19,6 @@ interface TaskListProps {
 export const TaskList = memo((props: TaskListProps) => {
   const { className, tasks, updateTask, mode, currentUserId, isManager } =
     props;
-  console.log(isManager);
 
   // Фильтрация по текущему пользователю, если требуется
   const filteredTasks = useMemo(() => {
@@ -86,7 +85,6 @@ export const TaskList = memo((props: TaskListProps) => {
         }));
       }
     }, [filteredTasks, mode, isManager]);
-  console.log(mode);
 
   return (
     <div className={classNames(cls.TaskList, {}, [className])}>
@@ -112,11 +110,3 @@ export const TaskList = memo((props: TaskListProps) => {
     </div>
   );
 });
-
-{
-  /* <div className={classNames(cls.TaskList, {}, [className])}>
-        {tasks.map((task) => (
-          <TaskCard task={task} key={task.id} updateTask={updateTask} />
-        ))}
-      </div> */
-}

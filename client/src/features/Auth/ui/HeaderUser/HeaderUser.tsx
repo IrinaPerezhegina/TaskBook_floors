@@ -1,9 +1,11 @@
-import { getAuthUser } from "@/features/Auth/model/selectors/authUserSelector";
-import { useAppDispatch, useAppSelector } from "@/hooks/hooks";
-import { Button, classNames, getFullName } from "@/shared";
 import { memo, useCallback } from "react";
 import { useNavigate } from "react-router";
+
+import { Button, classNames, getFullName } from "@/shared";
+import { useAppDispatch, useAppSelector } from "@/shared/lib/hooks/hooks";
+import { getAuthUser } from "../../model/selectors/authUserSelector";
 import { authActions } from "../../model/slice/authSlice";
+
 import cls from "./HeaderUser.module.scss";
 
 interface HeaderUserProps {
@@ -15,6 +17,7 @@ export const HeaderUser = memo((props: HeaderUserProps) => {
   const dispatch = useAppDispatch();
   const user = useAppSelector(getAuthUser);
   const navigate = useNavigate();
+  console.log(user);
 
   const onLogout = useCallback(async () => {
     dispatch(authActions.logout());

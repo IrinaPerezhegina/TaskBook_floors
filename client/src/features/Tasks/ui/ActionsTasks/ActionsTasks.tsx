@@ -1,11 +1,11 @@
 import { memo, useState } from "react";
 
 import { Button, classNames } from "@/shared";
+import { FilterWidget } from "@/widgets/FilterWidget";
 import { TaskList } from "@/widgets/TaskList";
 import { TaskModal } from "@/widgets/TaskModal";
 import { useActionsTask } from "../../model/hooks/useActionsTask";
 
-import { FilterWidget } from "@/widgets/FilterWidget";
 import cls from "./ActionsTasks.module.scss";
 
 interface ActionsTasksProps {

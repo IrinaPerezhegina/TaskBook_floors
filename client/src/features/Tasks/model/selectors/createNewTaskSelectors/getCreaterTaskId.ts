@@ -1,5 +1,4 @@
-import { StateSchema } from "@/app/types/StateSchema";
+import { StateSchema } from "@/shared";
 
-export const getCreaterTaskId = (state: StateSchema) => state.tasks.task.creatorId;
-export const getCreaterTaskcc = (state: StateSchema) => state.auth.managerId;
-
+export const getCreaterTaskId = (state: StateSchema) =>
+  state.tasks.task.creatorId;

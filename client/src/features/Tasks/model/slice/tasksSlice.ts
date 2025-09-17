@@ -1,7 +1,8 @@
-import { Priority, Status, Task } from "@/entities/Task";
-import { updateTask } from "@/features/Tasks/model/services/updateTask/updateTask";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+import { Priority, Status, Task } from "@/entities/Task";
 import { createNewTask } from "../../model/services/cteateNewTask/createNewTask";
+import { updateTask } from "../../model/services/updateTask/updateTask";
 import { tasksSchema } from "../../model/types/tasksSchema";
 import {
   fetchUserTasks,

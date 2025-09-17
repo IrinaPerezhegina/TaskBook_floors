@@ -5,7 +5,6 @@ import {
   getUsersForRegister,
 } from "@/entities/User";
 import { authActions } from "@/features/Auth/model/slice/authSlice";
-import { useAppDispatch, useAppSelector } from "@/hooks/hooks";
 import {
   Button,
   classNames,
@@ -15,6 +14,7 @@ import {
   Select,
   Text,
 } from "@/shared";
+import { useAppDispatch, useAppSelector } from "@/shared/lib/hooks/hooks";
 import { memo, useCallback, useEffect, useMemo } from "react";
 import { useSelector } from "react-redux";
 
@@ -187,7 +187,7 @@ export const RegisterForm = memo((props: RegisterFormProps) => {
         placeholder="Выберите руководителя..."
       />
       <div className={cls.wrapperComponents}>
-        {(loading || loadingUsers) && <Loader />}
+       <Loader isLoading={loading || loadingUsers}/>
         {error && <Text text={error} />}
         {errorUsers && <Text text={errorUsers} />}
       </div>

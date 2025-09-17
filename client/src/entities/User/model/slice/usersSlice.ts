@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
 import { fetchUsersSubordinates } from "../../model/services/fetchUsersSubordinates";
 import { fetchUsersForRegister } from "../services/fetchUsersForRegister";
 import { User } from "../types/user";

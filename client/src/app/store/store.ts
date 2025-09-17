@@ -1,8 +1,9 @@
-import { StateSchema } from "@/app/types/StateSchema";
+import { configureStore } from "@reduxjs/toolkit";
+
 import { usersReducer } from "@/entities/User";
 import { authReducer } from "@/features/Auth";
 import { tasksReducer } from "@/features/Tasks";
-import { configureStore } from "@reduxjs/toolkit";
+import { StateSchema } from "@/shared";
 
 export const store = configureStore<StateSchema>({
   reducer: {
@@ -14,8 +15,3 @@ export const store = configureStore<StateSchema>({
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
-
-export interface ThunkConfig<T = unknown> {
-  rejectValue: T;
-  state: StateSchema;
-}

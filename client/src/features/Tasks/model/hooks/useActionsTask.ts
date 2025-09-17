@@ -1,24 +1,26 @@
+import { useCallback, useEffect, useMemo, useState } from "react";
+
 import { Priority, Status, Task } from "@/entities/Task";
 import { getUsersSubordinates } from "@/entities/User";
-import { getCreaterTaskId } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getCreaterTaskId";
-import { getManagerId } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getManagerId";
-import { getTaskDateCompletion } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getTaskDateCompletion";
-import { getTaskDescription } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getTaskDescription";
-import { getTaskError } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getTaskError";
-import { getTaskLoading } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getTaskLoading";
-import { getTaskPriority } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getTaskPriority";
-import { getTaskResponsible } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getTaskResponsible";
-import { getTaskStatus } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getTaskStatus";
-import { getTaskTitle } from "@/features/Tasks/model/selectors/createNewTaskSelectors/getTaskTitle";
-import { getUserTasks } from "@/features/Tasks/model/selectors/userTasksSelectors/getUserTasks";
-import { createNewTask } from "@/features/Tasks/model/services/cteateNewTask/createNewTask";
-import { updateTask } from "@/features/Tasks/model/services/updateTask/updateTask";
-import { tasksActions } from "@/features/Tasks/model/slice/tasksSlice";
-import { useAppDispatch, useAppSelector } from "@/hooks/hooks";
-import { getFullName } from "@/shared";
+import { getFullName, useAppDispatch, useAppSelector } from "@/shared";
 import { SelectOption } from "@/shared/types";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import {
+  getCreaterTaskId,
+  getManagerId,
+  getTaskDateCompletion,
+  getTaskDescription,
+  getTaskError,
+  getTaskLoading,
+  getTaskPriority,
+  getTaskResponsible,
+  getTaskStatus,
+  getTaskTitle,
+  getUserTasks,
+} from "../../model/selectors";
 import { getUpdateTaskId } from "../../model/selectors/createNewTaskSelectors/getUpdateTaskId";
+import { createNewTask } from "../../model/services/cteateNewTask/createNewTask";
+import { updateTask } from "../../model/services/updateTask/updateTask";
+import { tasksActions } from "../../model/slice/tasksSlice";
 
 interface UseActionsTasksProps {
   id: number;
@@ -168,10 +170,10 @@ export const useActionsTask = (
 
       if (response.meta.requestStatus !== "rejected") {
         dispatch(tasksActions.resetTask());
-
         onChangeVisibilityModal();
       }
     }
+
     if (isUpdate === true) {
       const response = await dispatch(
         updateTask({

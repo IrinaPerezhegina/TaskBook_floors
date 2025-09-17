@@ -1,19 +1,24 @@
 import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
-
-import { useAppDispatch } from "@/hooks/hooks";
-import { Button, classNames, Input, Loader, Text } from "@/shared";
-
-import { loginUser } from "../../model/services/loginUser/loginUser";
-import { authActions } from "../../model/slice/authSlice";
-
 import { useNavigate } from "react-router";
+
+import {
+  Button,
+  classNames,
+  Input,
+  Loader,
+  Text,
+  useAppDispatch,
+} from "@/shared";
+
 import {
   getLoginError,
   getLoginIsLoading,
   getLoginPassword,
   getLoginUsername,
 } from "../../model/selectors/loginSelectors";
+import { loginUser } from "../../model/services/loginUser/loginUser";
+import { authActions } from "../../model/slice/authSlice";
 import cls from "./LoginForm.module.scss";
 
 interface LoginFormProps {
@@ -83,7 +88,7 @@ export const LoginForm = memo((props: LoginFormProps) => {
           onChange={onChangePassword}
         />
         <div className={cls.wrapperComponents}>
-          {loading && <Loader variant="smallLoader" />}
+          <Loader isLoading={loading} variant="smallLoader" />
           {error && <Text text={error} />}
         </div>
         <Button onClick={onLoginClick} text="Войти" />

@@ -1,5 +1,7 @@
-import { classNames } from "@/shared";
 import { PropsWithChildren } from "react";
+
+import { classNames } from "@/shared";
+
 import cls from "./TaskSection.module.scss";
 
 interface TaskSectionProps {

@@ -1,5 +1,7 @@
-import { classNames } from "@/shared/lib";
 import { memo, PropsWithChildren, ReactNode } from "react";
+
+import { classNames } from "@/shared/lib";
+
 import cls from "./Header.module.scss";
 
 interface HeaderProps {

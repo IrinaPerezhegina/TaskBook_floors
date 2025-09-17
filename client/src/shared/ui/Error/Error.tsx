@@ -2,15 +2,17 @@ import { memo } from "react";
 
 import { classNames } from "@/shared/lib/helper";
 
-import "./Error.css";
+import cls from "./Error.module.scss";
 
 interface ErrorProps {
-  error: string;
+  error: string | undefined;
   className?: string;
 }
 
 export const Error = memo((props: ErrorProps) => {
   const { className, error } = props;
-
-  return <div className={classNames("Error", className)}>{error}</div>;
+  if (!error) {
+    return;
+  }
+  return <div className={classNames(cls.Error, className)}>{error}</div>;
 });

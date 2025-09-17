@@ -1,8 +1,7 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-import { ThunkConfig } from "@/app/store";
-import { $api } from "@/shared";
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { $api, ThunkConfig } from "@/shared";
 import { User } from "../types/user";
 
 export const fetchUsersForRegister = createAsyncThunk<

@@ -1,10 +1,9 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-import { ThunkConfig } from "@/app/store";
-import { Task } from "@/entities/Task/model/types/task";
-import { User } from "@/entities/User/model/types/user";
-import { $api } from "@/shared";
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { Task } from "@/entities/Task";
+import { User } from "@/entities/User";
+import { $api, ThunkConfig } from "@/shared";
 
 export interface TaskResponse extends Task {
   assignee: User;

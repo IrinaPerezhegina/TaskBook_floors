@@ -1,4 +1,4 @@
-import { StateSchema } from "@/app/types/StateSchema";
+import { StateSchema } from "@/shared";
 
 export const getErrorUsersForRegister = (state: StateSchema) =>
   state.users.error;

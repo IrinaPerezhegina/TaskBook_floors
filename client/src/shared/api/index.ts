@@ -1,2 +1,1 @@
-export { $api } from "@/shared/api/api";
-
+export { $api } from "./api";

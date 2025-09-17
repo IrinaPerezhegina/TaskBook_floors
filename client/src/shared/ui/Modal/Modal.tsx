@@ -1,5 +1,7 @@
-import { classNames } from "@/shared/lib";
 import { memo, PropsWithChildren } from "react";
+
+import { classNames } from "@/shared/lib";
+
 import cls from "./Modal.module.scss";
 
 interface ModalProps {

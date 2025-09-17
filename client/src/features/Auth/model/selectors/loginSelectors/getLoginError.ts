@@ -1,3 +1,3 @@
-import { StateSchema } from "../../../../../app/types/StateSchema";
+import { StateSchema } from "../../../../../shared/types/StateSchema";
 
 export const getLoginError = (state: StateSchema) => state.auth.errorLogin;

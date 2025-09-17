@@ -1,14 +1,15 @@
+import { useEffect } from "react";
+
 import { fetchUsersSubordinates, HeaderUser } from "@/entities/User";
 import { getAuthUser } from "@/features/Auth";
 import { ActionsTasks } from "@/features/Tasks";
 import { getUserTasksError } from "@/features/Tasks/model/selectors/userTasksSelectors/getUserTasksError";
 import { getUserTasksLoading } from "@/features/Tasks/model/selectors/userTasksSelectors/getUserTasksLoading";
-import { useAppDispatch, useAppSelector } from "@/hooks/hooks";
 import { Error, Header, Loader, PageLayout } from "@/shared";
-import { useEffect } from "react";
-import { fetchUserTasks } from "../../features/Tasks/model/services/fetchTasksByUserId/fetchUserTasks";
+import { useAppDispatch, useAppSelector } from "@/shared/lib/hooks/hooks";
+import { fetchUserTasks } from "../../../features/Tasks/model/services/fetchTasksByUserId/fetchUserTasks";
 
-export const TasksPage: React.FC = () => {
+const TasksPage: React.FC = () => {
   const dispatch = useAppDispatch();
   const user = useAppSelector(getAuthUser);
   const isLoading = useAppSelector(getUserTasksLoading);
@@ -32,9 +33,10 @@ export const TasksPage: React.FC = () => {
     <div>
       <PageLayout head={<Header children={<HeaderUser />} />}>
         <ActionsTasks id={Number(user?.id)} />
-        {isLoading && <Loader variant="bigLoader" />}
-        {error ? <Error error={error} /> : <div className=""></div>}
+        <Loader isLoading={isLoading} variant="bigLoader" />
+        <Error error={error} />
       </PageLayout>
     </div>
   );
 };
+export default TasksPage;

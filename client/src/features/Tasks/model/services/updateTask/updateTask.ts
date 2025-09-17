@@ -1,10 +1,9 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-import { ThunkConfig } from "@/app/store";
 import { Task } from "@/entities/Task/model/types/task";
 import { TaskResponse } from "@/features/Tasks/model/services/fetchTasksByUserId/fetchUserTasks";
-import { $api } from "@/shared";
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { $api, ThunkConfig } from "@/shared";
 
 export const updateTask = createAsyncThunk<
   TaskResponse,

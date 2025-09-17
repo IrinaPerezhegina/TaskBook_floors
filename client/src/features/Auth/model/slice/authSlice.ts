@@ -1,5 +1,6 @@
-import { USER_LOCALSTORAGE_KEY } from "@/shared";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+import { USER_LOCALSTORAGE_KEY } from "@/shared";
 import { initAuthUser } from "../../model/services/initAuthUser/initAuthUser";
 import { registerUser } from "../../model/services/registerUser/registerUser";
 import { AuthResponse } from "../../model/types/auth";

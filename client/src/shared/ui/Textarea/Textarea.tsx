@@ -1,5 +1,7 @@
-import { classNames } from "@/shared/lib";
 import { memo } from "react";
+
+import { classNames } from "@/shared/lib";
+
 import cls from "./TextArea.module.scss";
 
 interface TextareaProps {

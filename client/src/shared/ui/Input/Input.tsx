@@ -15,6 +15,7 @@ export interface InputProps {
   placeholder?: string;
   className?: string;
 }
+
 export const Input = memo((props: InputProps) => {
   const {
     name,

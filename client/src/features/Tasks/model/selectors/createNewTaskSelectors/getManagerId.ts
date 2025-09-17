@@ -1,3 +1,3 @@
-import { StateSchema } from "@/app/types/StateSchema";
+import { StateSchema } from "@/shared";
 
 export const getManagerId = (state: StateSchema) => state.auth.user?.managerId;

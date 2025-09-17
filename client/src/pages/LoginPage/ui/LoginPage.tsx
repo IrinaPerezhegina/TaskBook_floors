@@ -1,6 +1,7 @@
+import React, { useCallback, useState } from "react";
+
 import { LoginForm, RegisterForm } from "@/features/Auth";
 import { PageLayout } from "@/shared";
-import React, { useCallback, useState } from "react";
 
 const LoginPage: React.FC = () => {
   const [isLogin, setIsisLogin] = useState(true);

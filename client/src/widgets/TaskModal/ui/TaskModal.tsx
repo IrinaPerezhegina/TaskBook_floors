@@ -64,7 +64,6 @@ export const TaskModal = memo((props: TaskModalProps) => {
   } = props;
 
   if (!isOpen) return;
-  console.log(readOnly);
 
   return (
     <Modal
@@ -113,9 +112,8 @@ export const TaskModal = memo((props: TaskModalProps) => {
           value={statusTask}
           options={status}
         />
-
         <Select
-          readOnly={readOnly}
+          readOnly={readOnly || subordinates?.length === 1}
           placeholder="Укажите ответственного..."
           onChange={finalResult.onSelectedResponsible}
           label="Ответственный"
@@ -123,7 +121,7 @@ export const TaskModal = memo((props: TaskModalProps) => {
           options={subordinates}
         />
         <div className={cls.wrapperComponents}>
-          {isLoading && <Loader variant="smallLoader" />}
+          <Loader isLoading={isLoading} variant="smallLoader" />
           {error && <Text text={error} />}
         </div>
         <div className={cls.btnWrap}>

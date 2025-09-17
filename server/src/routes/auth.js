@@ -109,10 +109,12 @@ router.post("/signin", async (req, res) => {
   res.json({
     token,
     user: {
+      managerId: user.managerId,
       id: user.id,
       login: user.login,
       firstName: user.firstName,
       lastName: user.lastName,
+      middleName: user.middleName,
     },
   });
 });
